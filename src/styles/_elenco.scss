@@ -1,0 +1,30 @@
+.elenco {
+    padding: 5.6vw;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #fff;
+
+    &__coluna {
+        display: flex;
+        grid-template-columns: repeat(2, 50%);
+        gap: 20px;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 40px;
+
+        &__item {
+            min-width: 400px;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+    }
+
+    img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+}

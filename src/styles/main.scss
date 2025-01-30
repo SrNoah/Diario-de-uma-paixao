@@ -1,0 +1,75 @@
+@use 'hero';
+@use 'elenco';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$corDeFundo: #50b0ff;
+$corTextoPrincipal: #f9f9f9;
+$corTextoSecundario: #7b1515;
+
+
+body {
+    background-color: $corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: $corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    display: block;
+    max-width: 30%;
+    height: 50px;
+    font-size: 18px;
+    color: $corTextoPrincipal;
+    background-color: $corTextoSecundario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+}
+
+// Caso eu use link
+//.link-text {
+    //@include text(18px);
+    //color: $corTextoSedundario;
+    //text-decoration: underline;
