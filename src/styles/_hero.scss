@@ -17,4 +17,22 @@
         justify-content: center;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.671);
     }
+
+    @media (max-width: 640px) {
+        max-width: 100%;
+        min-height: 20vh;
+
+        &__content {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        min-height: 60vh;
+
+        &__content {
+            display: none;
+        }
+    }
 }
